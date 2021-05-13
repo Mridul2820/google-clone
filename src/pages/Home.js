@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import AppsIcon from '@material-ui/icons/Apps';
 import Avatar from '@material-ui/core/Avatar';
@@ -6,6 +6,8 @@ import Search from '../components/Search';
 import AppList from '../components/AppList';
 
 const Home = () => {
+    const [appsOpen, setAppsOpen] = useState(false)
+
     return (
         <div className="home">
             <div className="home__header">
@@ -16,8 +18,16 @@ const Home = () => {
                 <div className="home__headerRight">
                     <Link to="gmail">Gamil</Link>
                     <Link to="images">Images</Link>
-                    <AppsIcon />
-                    <AppList />
+                    <div 
+                        className="home__appicon" 
+                        style={{
+                            backgroundColor: appsOpen ?  'rgba(95,99,104,0.24)' : '#fff'
+                        }}
+                        onClick={() => setAppsOpen(!appsOpen)}
+                    >
+                        <AppsIcon />
+                    </div>
+                    <AppList appsOpen={appsOpen} />
                     <Avatar className="home__avatar"/>
                 </div>
             </div>

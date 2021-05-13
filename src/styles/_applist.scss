@@ -1,68 +1,73 @@
 .applist {
-    position: relative;
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 328px;
+    height: 448px;
+    max-height: calc(-63px + 100vh);
+    padding: 20px 25px;
+    border-radius: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+    z-index: 100;
 
-    .applist__main {
-        position: absolute;
-        top: 30px;
-        right: -40px;
-        width: 328px;
-        height: 448px;
-        max-height: calc(-63px + 100vh);
-        padding: 25px;
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #dadce0;
+        background-clip: padding-box;
+        border: 4px solid transparent;
         border-radius: 8px;
-        overflow-y: auto;
-        overflow-x: hidden;
-        background: #fff;
-        border: 1px solid rgba(0,0,0,0.2);
-        border-radius: 8px;
-        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
-        // visibility: hidden;
+        box-shadow: none;
+        min-height: 50px;
+    }
 
-        &::-webkit-scrollbar {
-            width: 16px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background: #dadce0;
-            background-clip: padding-box;
-            border: 4px solid transparent;
-            border-radius: 8px;
-            box-shadow: none;
-            min-height: 50px;
-        }
+    .applist__apps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 10px;
 
-        .applist__apps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+        .applist__item {
+            height: 84px;
+            width: 84px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            border-radius: 8px;
+            transition: .5s;
 
-            .applist__item {
-                height: 84px;
-                width: 84px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-    
-                .applist__avatar {
-                    height: 35px;
-                    width: 35px;
-                }
-    
-                img {
-                    height: 35px;
-                    width: 35px;
-                }
-    
-                p {
-                    margin-top: 8px;
-                    font-size: 14px;
-                    letter-spacing: .09px;
-                    line-height: 18px;
-                }
+            &:hover {
+                background-color: #e8f0fe;
+            }
+
+            .applist__avatar {
+                height: 35px;
+                width: 35px;
+            }
+
+            img {
+                height: 35px;
+                width: 35px;
+            }
+
+            p {
+                margin-top: 8px;
+                font-size: 14px;
+                letter-spacing: .09px;
+                line-height: 18px;
             }
         }
     }
 }
+
 
 .applist__line {
     height: 1px;
