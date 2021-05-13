@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AppsIcon from '@material-ui/icons/Apps';
 import Avatar from '@material-ui/core/Avatar';
 import Search from '../components/Search';
+import AppList from '../components/AppList';
 
 const Home = () => {
     return (
@@ -16,8 +17,8 @@ const Home = () => {
                     <Link to="gmail">Gamil</Link>
                     <Link to="images">Images</Link>
                     <AppsIcon />
-                    <Avatar />
-
+                    <AppList />
+                    <Avatar className="home__avatar"/>
                 </div>
             </div>
             <div className="home__body">
