@@ -16,7 +16,7 @@ const Home = () => {
                     <Link to="store">Store</Link>
                 </div>
                 <div className="home__headerRight">
-                    <Link to="gmail">Gamil</Link>
+                    <Link to="gmail">Gmail</Link>
                     <Link to="images">Images</Link>
                     <div 
                         className="home__appicon" 
