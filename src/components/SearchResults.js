@@ -8,12 +8,12 @@ const SearchResults = ({ data }) => {
                 About {data.data.searchInformation.formattedTotalResults} results ({data.data.searchInformation.formattedSearchTime} seconds) 
             </p>
             {data.data.items.map(item => (
-                <div className="searchResult__items">
-                    <a href={item.link}>
+                <div key={item.cacheId} className="searchResult__item">
+                    <a className="searchResult__link" href={item.link}>
                         {item.displayLink} <ArrowDropDownIcon />
                     </a>
-                    <a  className="searchResult__title" href={item.link}>
-                        <h2>{item.title}</h2>
+                    <a className="searchResult__title" href={item.link}>
+                        <h3>{item.title}</h3>
                     </a>
                     <p  className="searchResult__snippet">{item.snippet}</p>
                 </div>

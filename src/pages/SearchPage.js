@@ -24,7 +24,7 @@ const SearchPage = () => {
                 <Link to="/">
                     <img 
                         className="searchpage__logo"
-                        src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+                        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
                         alt="google logo" 
                     />
                 </Link>
