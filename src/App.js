@@ -8,7 +8,7 @@ const App = () => {
         <div className="app">
             <Router>
                 <Switch>
-                    <Route path="search">
+                    <Route path="/search">
                         Google Search
                     </Route>
                     <Route path="/">
