@@ -9,6 +9,11 @@
     max-width: 560px;
     margin: 40px auto 0 auto;
 
+    &:hover,
+    &:focus-within {
+        box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    }
+
     @media screen and (max-width: 425px) {
         margin: 30px auto 0 auto;
         width: 90vw;
