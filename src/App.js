@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import './styles/app.scss'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchPage from './pages/SearchPage';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                         <Home />
                     </Route>
                 </Switch>
+                <Footer />
             </Router>
         </div>
     )
