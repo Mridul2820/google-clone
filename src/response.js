@@ -1,4 +1,4 @@
-const data = {
+export const searchData = {
     "kind": "customsearch#search",
     "url": {
       "type": "application/json",
@@ -482,5 +482,5 @@ const data = {
     ]
   }
 
-export default data
+// export default SearchData
   

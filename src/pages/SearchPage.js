@@ -3,8 +3,7 @@ import Search from '../components/Search'
 import { Link } from 'react-router-dom'
 import { useStateValue } from '../context/StateProvider'
 import useGoogleSearch from '../hooks/useGoogleSearch'
-// import Response from "../response"
-
+// import {searchData} from "../response"
 
 import SearchResults from '../components/SearchResults'
 import SearchOptions from '../components/SearchOptions'
@@ -14,7 +13,7 @@ const SearchPage = () => {
 
     const {data} = useGoogleSearch(term)
 
-    // const data = Response
+    // const data = searchData
 
     console.log(data);
 
@@ -24,7 +23,7 @@ const SearchPage = () => {
                 <Link to="/">
                     <img 
                         className="searchpage__logo"
-                        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
                         alt="google logo" 
                     />
                 </Link>
@@ -35,11 +34,11 @@ const SearchPage = () => {
                 </div>
             </div>
             
-            {term &&
+            {term && (
                 <SearchResults 
                     data={data}
                 />
-            }
+            )}
         </div>
     )
 }

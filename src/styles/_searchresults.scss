@@ -46,3 +46,10 @@
 .searchResult__snippet {
     font-size: 14px;
 }
+
+.searchResult__image {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
