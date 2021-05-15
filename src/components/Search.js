@@ -7,7 +7,8 @@ import { useStateValue } from '../context/StateProvider';
 import { actionTypes } from '../context/reducer';
 
 const Search = ({ hideButtons = false }) => {
-    const[{}, dispatch] = useStateValue()
+    // eslint-disable-next-line
+    const[term = {}, dispatch] = useStateValue()
 
     const [input, setInput] = useState("")
     const history = useHistory()

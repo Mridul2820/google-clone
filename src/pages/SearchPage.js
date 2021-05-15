@@ -9,6 +9,7 @@ import SearchResults from '../components/SearchResults'
 import SearchOptions from '../components/SearchOptions'
 
 const SearchPage = () => {
+    // eslint-disable-next-line
     const[{ term }, dispatch] = useStateValue()
 
     const {data} = useGoogleSearch(term)
