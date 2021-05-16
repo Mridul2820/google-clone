@@ -11,6 +11,10 @@
     @media screen and (max-width: 768px) {
         margin: 30px;
     }
+
+    @media screen and (max-width: 425px) {
+        margin: 30px 20px;
+    }
 }
 
 .searchResult__count {
