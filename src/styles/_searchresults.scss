@@ -3,6 +3,14 @@
     margin-top: 20px;
     margin-left: 170px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 992px) {
+        margin-left: 130px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 30px;
+    }
 }
 
 .searchResult__count {
